@@ -1,0 +1,23 @@
+public class Person {
+
+    // Attributes (fields)
+    private String name;
+    private int age;
+
+    // Constructor
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Method to introduce the person
+    public void introduce() {
+        System.out.println("Hello, my name is " + name + " and I am " + age + " years old.");
+    }
+
+    // Main method to create a person object and call introduce()
+    public static void main(String[] args) {
+        Person p = new Person("Idris", 31);
+        p.introduce();
+    }
+}
