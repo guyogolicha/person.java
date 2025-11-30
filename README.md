@@ -21,3 +21,26 @@ public class Person {
         p.introduce();
     }
 }
+public class Student extends Person {
+
+    private String studentId;
+    private String course;
+
+    // Constructor
+    public Student(String name, int age, String studentId, String course) {
+        super(name, age); // calls Person's constructor
+        this.studentId = studentId;
+        this.course = course;
+    }
+
+    // Method specific to Student
+    public void study() {
+        System.out.println("Student " + studentId + " is studying " + course + ".");
+    }
+
+    public static void main(String[] args) {
+        Student s = new Student("Idris", 25, "CS101", "Computer Science");
+        s.introduce();  // from Person class
+        s.study();      // from Student class
+    }
+}
